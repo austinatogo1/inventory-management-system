@@ -1,6 +1,5 @@
 """
 Lightweight validation for inventory payloads.
-No ORM is used since we're simulating storage with a list (per assignment spec).
 """
 
 REQUIRED_FIELDS = ["name", "price", "quantity"]
