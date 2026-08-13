@@ -37,6 +37,7 @@ def test_add_item_manually(mock_input, mock_post, capsys):
     cli.add_item_manually()
     captured = capsys.readouterr()
     assert "Item added" in captured.out
+    assert mock_input.call_count == 3  # Should prompt for name, price, and quantity
 
 
 @patch("builtins.input", side_effect=["Bread", "abc", "10"])
@@ -44,3 +45,4 @@ def test_add_item_manually_invalid_price(mock_input, capsys):
     cli.add_item_manually()
     captured = capsys.readouterr()
     assert "Price must be a number" in captured.out
+    assert mock_input.call_count == 3  # Should prompt for price again
