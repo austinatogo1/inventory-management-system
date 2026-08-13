@@ -1,4 +1,3 @@
-cat >> README.md << 'EOF'
 # Inventory Management System
 
 A Flask-based REST API with CRUD operations for managing retail inventory, enriched with product
