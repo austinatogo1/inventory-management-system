@@ -14,7 +14,7 @@ def view_all_items():
         print("No items in inventory.")
         return
     for item in items:
-        print(f"[{item['id']}] {item['name']} — ${item['price']} — qty: {item['quantity']}")
+        print(f"[{item['id']}] {item['name']} — Ksh{item['price']} — qty: {item['quantity']}")
 
 
 def view_one_item():
