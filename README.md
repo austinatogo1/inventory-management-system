@@ -79,3 +79,15 @@ HEADERS = {"User-Agent": "InventoryManagementSystem/1.0 (contact: your-email@exa
 
 If you fork this project, swap in your own contact info in that string.
 
+
+## Notes on the OpenFoodFacts Integration
+
+OpenFoodFacts rejects requests that don't send a descriptive `User-Agent` header (you'll get a
+`403 Forbidden`, which the API wraps as a `502` from our own `/inventory/lookup` route since the
+upstream call failed). `app/external_api.py` sends a `HEADERS` dict with every request:
+
+```python
+HEADERS = {"User-Agent": "InventoryManagementSystem/1.0 (contact: your-email@example.com)"}
+```
+
+If you fork this project, swap in your own contact info in that string.
