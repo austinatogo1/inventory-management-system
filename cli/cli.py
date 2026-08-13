@@ -1,6 +1,5 @@
 """
 CLI client for the Inventory Management API.
-Run the Flask server first (python run.py), then run this file.
 """
 
 import requests
